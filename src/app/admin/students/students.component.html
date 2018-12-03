@@ -1,0 +1,15 @@
+<clr-datagrid>
+    <clr-dg-column>User ID</clr-dg-column>
+    <clr-dg-column>First Name</clr-dg-column>
+    <clr-dg-column>Last Name</clr-dg-column>
+    <clr-dg-column>Creation date</clr-dg-column>
+
+    <clr-dg-row *ngFor="let student of students">
+        <clr-dg-cell>{{student.id.value}}</clr-dg-cell>
+        <clr-dg-cell>{{student.name.first}}</clr-dg-cell>
+        <clr-dg-cell>{{student.name.last}}</clr-dg-cell>
+        <clr-dg-cell>{{student.registered.date | date}}</clr-dg-cell>
+    </clr-dg-row>
+
+    <clr-dg-footer>{{ students.length }} users</clr-dg-footer>
+</clr-datagrid>
